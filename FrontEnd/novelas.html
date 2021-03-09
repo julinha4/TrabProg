@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Sistema de Novelas</title>
+</head>
+
+<body>
+  <!--Inicio Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="img/tv.png" height="50px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <span class="navbar-text">Cadastro de Novelas</span>
+      <a class="nav-link nav-item" href="#">Início <span class="sr-only">(current)</span></a>
+      <a class="nav-link nav-item" href="#" id="link_listar_novelas">Listar novelas</a>
+      <a class="nav-link nav-item" href="#" id="link_listar_personagens">Listar personagens</a>
+      <a class="nav-link nav-item" href="#" data-toggle="modal" data-target="#exampleModal">Incluir</a>
+    </div>
+  </nav>
+  <!--Fim Navbar-->
+
+  <h1 style="text-align: center;">Lista de Novelas</h1>
+  <br>
+  <div id="containerTable">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Emissora</th>
+          <th scope="col" style="width:250px">Data de Transmissão</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Popularidade</th>
+          <th scope="col">Operações</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabelaNovelas">
+
+      </tbody>
+    </table>
+  </div>
+
+  <br><br><br><br><br>
+  <h1 style="text-align: center;">Lista de Personagens</h1>
+  <br>
+  <div id="containerTable2">     
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Idade</th>
+          <th scope="col">Resumo</th>
+          <th scope="col">Operações</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabelaPersonagens">
+        
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="exampleModalLabel">Nova novela</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Nome:</label>
+              <input type="text" class="form-control" id="nome_novela">
+            </div>
+
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Emissora:</label>
+              <input type="text" class="form-control" id="emissora">
+            </div>
+
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Data de transmissão:</label>
+              <input type="text" class="form-control" id="data_transmissao">
+            </div>
+
+            <button type="button" class="btn btn-primary" id="incdrop">Incluir gen</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" id="btn_inc_novela">Incluir</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="js/js.js"></script>
+</body>
+
+</html>
